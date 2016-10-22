@@ -37,7 +37,7 @@ If you still have dependency version issues, use [virtualenv](http://docs.python
 You can find some good dataset options [here](https://gist.github.com/entaroadun/1653794). Make sure to look at the 
 [fetch_movielens](https://github.com/lyst/lightfm/blob/master/lightfm/datasets/movielens.py#L107) method to see how it works.
 
-2. Use 3 different loss functions (so 3 different models), compare their results, and then only print the recommendations ((products, songs, tv shows, etc.) for the best one. You'll 
+2. Use 3 different loss functions (so 3 different models), compare their results, and then only print the recommendations (products, songs, tv shows, etc.) for the best one. You'll 
 find the available loss functions [here](https://github.com/lyst/lightfm/blob/master/lightfm/lightfm.py#L35).
 
 ##Credits
