@@ -1,9 +1,11 @@
 # recommender_system_challenge
-Recommender System Challenge by @Sirajology on Youtube
+Recommender System Challenge by @Sirajology on [Youtube](https://youtu.be/9gBC9R-msAk).
 
 ##Overview
 
-This is the code for the Recommender System challenge for 'Learn Python for Data Science #3' by @Sirajology on [YouTube](https://youtu.be/o_OZdbCzHUA). The code uses the [tweepy](http://www.tweepy.org/)  library to access the Twitter API and the [TextBlob](https://textblob.readthedocs.io/en/dev/) library to perform Sentiment Analysis on each Tweet. We'll be able to see how positive or negative each tweet is about whatever topic we choose. 
+This is the code for the Recommender System challenge for 'Learn Python for Data Science #3' by @Sirajology on [YouTube](https://youtu.be/9gBC9R-msAk). The code uses the [tweepy](http://www.tweepy.org/)  library to access the Twitter API and the [TextBlob](https://textblob.readthedocs.io/en/dev/) library to perform Sentiment Analysis on each Tweet. We'll be able to see how positive or negative each tweet is about whatever topic we choose. 
+
+The code uses the [lightfm] recommender system library to train a hybrid content-based + collaborative algorithm that uses the WARP loss function on the [movielens](http://grouplens.org/datasets/movielens/) dataset. The movielens dataset contains movies and ratings from over 1700 users. Once trained, our script prints out recommended movies for whatever users from the dataset that we choose to terminal.
 
 ##Dependencies
 
