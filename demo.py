@@ -8,7 +8,7 @@ from lightfm import LightFM
 #
 
 #fetch data and format it
-data = fetch_movielens( min_rating=4.0)
+data = fetch_movielens(data_home='', min_rating=4.0)
 
 #print training and testing data
 print(repr(data['train']))
