@@ -8,7 +8,7 @@ from lightfm import LightFM
 #
 
 #fetch data and format it
-data = fetch_movielens(min_rating=4.0)
+data = fetch_movielens(data_home='', min_rating=4.0)
 
 #print training and testing data
 print(repr(data['train']))
@@ -41,8 +41,13 @@ def sample_recommendation(model, data, user_ids):
 
         #movies our model predicts they will like
         scores = model.predict(user_id, np.arange(n_items))
+
+        #remove the movie that user has seen
+        unseen_mask = np.in1d(scores, data['train'].tocsr()[user_id].toarray(), assume_unique=True, invert=True)
+        unseen_scores = scores[unseen_mask]
+
         #rank them in order of most liked to least
-        top_items = data['item_labels'][np.argsort(-scores)]
+        top_items = data['item_labels'][np.argsort(-unseen_scores)]
 
         #print out the results
         print("User %s" % user_id)
